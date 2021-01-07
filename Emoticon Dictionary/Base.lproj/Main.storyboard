@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1ff-Hm-gwm">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mcq-Fe-bJn">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -32,28 +32,30 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mcq-Fe-bJn" secondAttribute="bottom" id="zPI-DA-e6e"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="czf-ir-Xeq"/>
                     <connections>
                         <outlet property="mainOverviewTable" destination="mcq-Fe-bJn" id="skR-7T-Bsq"/>
+                        <segue destination="BKb-wc-PUV" kind="show" identifier="explodeEmoticon" id="BKC-19-iZF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="94.419642857142847"/>
+            <point key="canvasLocation" x="986.95652173913049" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Emoticon Exploder View Controller-->
         <scene sceneID="bnB-4I-Iis">
             <objects>
-                <viewController id="BKb-wc-PUV" sceneMemberID="viewController">
+                <viewController id="BKb-wc-PUV" customClass="emoticonExploderViewController" customModule="Emoticon_Dictionary" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OVw-tn-aMD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ozg-v3-hi3">
-                                <rect key="frame" x="63" y="144" width="288" height="319"/>
+                                <rect key="frame" x="98" y="188" width="218" height="239"/>
                                 <attributedString key="attributedText">
                                     <fragment content="🧳">
                                         <attributes>
-                                            <font key="NSFont" size="288" name=".AppleColorEmojiUI"/>
+                                            <font key="NSFont" metaFont="system" size="200"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -61,7 +63,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OaZ-NH-d9g">
-                                <rect key="frame" x="186" y="503" width="42" height="21"/>
+                                <rect key="frame" x="186" y="467" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -76,10 +78,33 @@
                             <constraint firstItem="OaZ-NH-d9g" firstAttribute="top" secondItem="Ozg-v3-hi3" secondAttribute="bottom" constant="40" id="r98-Ts-kfU"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="7cg-go-iEe"/>
+                    <connections>
+                        <outlet property="emoticonExplanation" destination="OaZ-NH-d9g" id="JGd-37-MXM"/>
+                        <outlet property="emoticonPicture" destination="Ozg-v3-hi3" id="GDo-zG-fuz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I6P-zB-vtj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="844.92753623188412" y="111.83035714285714"/>
+            <point key="canvasLocation" x="1750.7246376811595" y="93.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="H3w-4a-pf3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1ff-Hm-gwm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hiV-Fo-ZOu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ffE-lw-kyS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x4S-kN-wv8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="76.811594202898561" y="93.75"/>
         </scene>
     </scenes>
     <resources>

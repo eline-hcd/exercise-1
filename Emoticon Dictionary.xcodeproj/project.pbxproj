@@ -13,6 +13,7 @@
 		38C7F3BB259DDBF100F9DB65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38C7F3B9259DDBF100F9DB65 /* Main.storyboard */; };
 		38C7F3BD259DDBF300F9DB65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38C7F3BC259DDBF300F9DB65 /* Assets.xcassets */; };
 		38C7F3C0259DDBF300F9DB65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38C7F3BE259DDBF300F9DB65 /* LaunchScreen.storyboard */; };
+		38C7F3C9259E405800F9DB65 /* emoticonExploderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C7F3C8259E405800F9DB65 /* emoticonExploderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		38C7F3BC259DDBF300F9DB65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38C7F3BF259DDBF300F9DB65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38C7F3C1259DDBF300F9DB65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38C7F3C8259E405800F9DB65 /* emoticonExploderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emoticonExploderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				38C7F3B3259DDBF100F9DB65 /* AppDelegate.swift */,
 				38C7F3B5259DDBF100F9DB65 /* SceneDelegate.swift */,
 				38C7F3B7259DDBF100F9DB65 /* ViewController.swift */,
+				38C7F3C8259E405800F9DB65 /* emoticonExploderViewController.swift */,
 				38C7F3B9259DDBF100F9DB65 /* Main.storyboard */,
 				38C7F3BC259DDBF300F9DB65 /* Assets.xcassets */,
 				38C7F3BE259DDBF300F9DB65 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 				38C7F3B8259DDBF100F9DB65 /* ViewController.swift in Sources */,
 				38C7F3B4259DDBF100F9DB65 /* AppDelegate.swift in Sources */,
 				38C7F3B6259DDBF100F9DB65 /* SceneDelegate.swift in Sources */,
+				38C7F3C9259E405800F9DB65 /* emoticonExploderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,6 +25,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let emoticon = emoticonArray[indexPath.row]
+        performSegue(withIdentifier: "explodeEmoticon" , sender:emoticon)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let defVC = segue.destination as! emoticonExploderViewController
+        defVC.emoji = sender as! String
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
